@@ -13,6 +13,8 @@ func main() {
 	client := http.Client{} // use this client to perform any http method you need
 
 	request, err := http.NewRequest(httpMethod, url, nil)
+
+	// configure headers
 	request.Header.Set("Accept", "application/json")
 
 	response, err := client.Do(request)
